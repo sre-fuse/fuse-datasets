@@ -8,10 +8,10 @@ from sklearn.model_selection import train_test_split
 from keras.utils import np_utils
 from fuse_datasets.download_extract import download_url, urls
 
-def load_face_data(dataset_name='7-2P-dataset'):
-    data_path = dataset_name
+def load_face_data():
+    data_path = "7-2P-dataset"
     if not os.path.isdir(data_path):
-        download_url(output_path='dataset.zip', url=urls[dataset_name])
+        download_url(output_path='dataset.zip', url=urls[data_path])
 
     categories = os.listdir(data_path)
     labels = [i for i in range(len(categories))]
@@ -55,7 +55,8 @@ def load_face_data(dataset_name='7-2P-dataset'):
     return train_data, test_data, train_target, test_target
 
 
-def load_apple_banana(dataset_name):
+def load_apple_banana():
+    dataset_name = "Apple-Banana"
     zip_file = f"{dataset_name}.zip"
 
     if not os.path.isdir(dataset_name):
@@ -83,5 +84,5 @@ def load_apple_banana(dataset_name):
 
 
 if __name__ == '__main__':
-    data, target = load_apple_banana(dataset_name="Apple-Banana")
+    data, target = load_apple_banana()
     print(data.shape)
