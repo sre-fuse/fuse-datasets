@@ -78,8 +78,6 @@ def load_apple_banana():
 
     data = np.array([i[0] for i in train_images])
     target = np.array([i[1] for i in train_images])
-    print("data shape", data.shape)
-    print("target.shape", target.shape)
     return data, target
 
 
