@@ -3,7 +3,7 @@ Usage:
 !pip install -e git+https://github.com/sre-fuse/fuse-datasets#egg=fuse-datasets`
 ```
 
-Configuration for support in google colab:
+To locate the installed package, we import site 
 ```
 import site
 site.main()
