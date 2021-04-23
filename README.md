@@ -16,7 +16,7 @@ from fuse_datasets import data_loader
 
 For "Apple-Banana" dataset
 ```
-data, label = data_loader.load_apple_banana()
+data, label, _ = data_loader.load_apple_banana()
 ```
 
 For "Fuse-Face-Dataset"
