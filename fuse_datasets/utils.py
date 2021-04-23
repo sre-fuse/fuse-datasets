@@ -7,5 +7,5 @@ def plot_data(data, target):
     for index, (image, label) in enumerate(zip(data[0:5], target[0:5])):
         plt.subplot(1, 5, index + 1)
         image = np.reshape(image, (100,100,3))
-        plt.imshow(img)
+        plt.imshow(image)
         plt.title(label, fontsize = 20)
