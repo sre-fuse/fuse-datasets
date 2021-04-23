@@ -72,7 +72,7 @@ def load_apple_banana():
             img_path = os.path.join(path, i)
             img = cv2.imread(img_path, cv2.IMREAD_COLOR)
             img = np.array(img)
-            img = img.reshape(-1)
+            # img = img.reshape(-1)
             train_images.append([img, label])
     shuffle(train_images)
 
