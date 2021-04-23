@@ -78,7 +78,11 @@ def load_apple_banana():
 
     data = np.array([i[0] for i in train_images])
     target = np.array([i[1] for i in train_images])
-    return data, target
+    input_shape = 2670
+    output_shape = 100 * 100 * 3
+    _ = data.reshape(input_shape, output_shape)
+
+    return data, target, _
 
 
 if __name__ == '__main__':
