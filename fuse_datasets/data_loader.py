@@ -71,6 +71,7 @@ def load_apple_banana():
         for i in os.listdir(path):
             img_path = os.path.join(path, i)
             img = cv2.imread(img_path, cv2.IMREAD_COLOR)
+            img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
             img = np.array(img)
             # img = img.reshape(-1)
             train_images.append([img, label])
