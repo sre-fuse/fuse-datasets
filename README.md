@@ -1,6 +1,6 @@
 Usage:
 ```
-!pip install -e git+https://github.com/sre-fuse/fuse-datasets#egg=fuse-datasets`
+!pip install -e git+https://github.com/sre-fuse/fuse-datasets#egg=fuse-datasets
 ```
 
 To locate the installed package, we import site 
