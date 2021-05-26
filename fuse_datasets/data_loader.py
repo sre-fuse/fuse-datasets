@@ -5,7 +5,7 @@ import numpy as np
 from zipfile import ZipFile
 from random import shuffle
 from sklearn.model_selection import train_test_split
-from keras.utils import np_utils
+from tensorflow.keras.utils.np_utils import to_categorical
 from fuse_datasets.download_extract import download_url, urls
 
 def load_face_data():
@@ -47,7 +47,7 @@ def load_face_data():
     data = np.reshape(data, (data.shape[0], img_size, img_size, 1))
     target = np.array(target)
 
-    new_target = np_utils.to_categorical(target)
+    new_target = to_categorical(target)
 
     train_data, test_data, train_target, test_target = train_test_split(data, new_target, test_size=0.2,
                                                                         stratify=new_target)
