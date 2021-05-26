@@ -5,7 +5,7 @@ import numpy as np
 from zipfile import ZipFile
 from random import shuffle
 from sklearn.model_selection import train_test_split
-from tensorflow.keras.utils.np_utils import to_categorical
+from tensorflow.python.keras.utils.np_utils import to_categorical
 from fuse_datasets.download_extract import download_url, urls
 
 def load_face_data():
